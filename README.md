@@ -1,9 +1,10 @@
 Quiz Generator
 ==============
 
-Install Middleman
+##### Install Middleman
+
 `gem install middleman`
 
-Run server
+##### Run server
 
 `bundle exec middleman server`
