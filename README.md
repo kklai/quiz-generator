@@ -1,4 +1,4 @@
-	Quiz Generator
+Quiz Generator
 ==============
 
 ##### Install Middleman
