@@ -9,11 +9,12 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
     
-    <%= stylesheet_link_tag "normalize", "all" %>
-    <%= javascript_include_tag  "all" %>
+    <%= stylesheet_link_tag "vox_universal", "vox", "vox_print", "40maps_styles" %>
+
+    <%= javascript_include_tag  "jquery.min.js", "all" %>
   </head>
   
-  <body class="<%= page_classes %>">
+  <body id="top" class="index <%= page_classes %>">
     <%= yield %>
   </body>
 </html>
