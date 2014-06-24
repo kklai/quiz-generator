@@ -47,6 +47,10 @@
 #   end
 # end
 
+helpers Middleman::Chorus::GoogleDrive::Helpers
+spreadsheet_id = "1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw"
+load_spreadsheet("Sheet1", spreadsheet_id, :gid => 0)
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
