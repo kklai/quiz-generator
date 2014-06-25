@@ -14,21 +14,7 @@ function readData(data, tabletop) {
 	console.log(data);
 	input = data;
 	displayQuestion();
-	selectAnswer();
-	buttonClick();
 }
-
-/*function showQuiz() {
-	for (i=0; i < input.length; i++) {
-		$(".content").append("<h3 class='question'>" + input[i].question + "</h3>");
-		$(".content").append("<span id='option-a'>" + input[i].a + "</span><br />");
-		$(".content").append("<span id='option-b'>" + input[i].b + "</span><br />");
-		$(".content").append("<span id='option-c'>" + input[i].c + "</span><br />");
-		$(".content").append("<span id='option-d'>" + input[i].d + "</span><br />");
-		$(".content").append("<button id='submit'>Check my answer</button>");
-		$(".content").append("<div class='answer'></div>");
-	}
-}*/
 
 function displayQuestion() {
 	$(".content").html("<h3 class='question'>" + input[currentQuestion].question + "</h3>" +
@@ -38,20 +24,12 @@ function displayQuestion() {
 		"<span id='option-d'>" + input[currentQuestion].d + "</span><br />" +
 		"<button id='submit'>Check my answer</button>" +
 		"<div class='answer'></div>");
-	/*for (i=0; i < input.length; i++) {
-		$(".content").append("<h3 class='question'>" + input[i].question + "</h3>");
-		$(".content").append("<span id='option-a'>" + input[i].a + "</span><br />");
-		$(".content").append("<span id='option-b'>" + input[i].b + "</span><br />");
-		$(".content").append("<span id='option-c'>" + input[i].c + "</span><br />");
-		$(".content").append("<span id='option-d'>" + input[i].d + "</span><br />");
-		$(".content").append("<button id='submit'>Check my answer</button>");
-		$(".content").append("<div class='answer'></div>");
-	}*/
+	selectAnswer();
+	buttonClick();
 }
 
 function selectAnswer() {
-	$("span").click(function(event) {
-		event.preventDefault();
+	$("span").click(function() {
 		$(".selected").removeClass("selected");
 		$(this).addClass("selected");
 	});
@@ -63,46 +41,33 @@ function buttonClick() {
 	});
 }
 
+
+
 function checkAnswer() {
 	if ($(".selected").length > 0) {
 		ans = $(".selected").html();
 		if (ans == input[currentQuestion].answer) {
-			$(".answer").html("<p>" + input[currentQuestion].correct + "</p>" + "<button id='next'>Next</button>");
-			currentQuestion++;
-
+			if (currentQuestion != (input.length-1)) {
+				$(".answer").html("<p>The answer was " + input[currentQuestion].answer + "<br>" + input[currentQuestion].correct + "</p>" + "<button id='next' onclick='nextQuestion()'>Next</button>");
+			} else {
+				$(".answer").html("<p>The answer was " + input[currentQuestion].answer + "<br>" + input[currentQuestion].correct + "</p>");
+			}
 		} else {
-			$(".answer").html("<p>" + input[currentQuestion].incorrect + "</p>" + "<button id='next'>Next</button>");
-			currentQuestion++;
+			if (currentQuestion != (input.length-1)) {
+				$(".answer").html("<p>The answer was " + input[currentQuestion].answer + "<br>" + input[currentQuestion].incorrect + "</p>" + "<button id='next' onclick='nextQuestion()'>Next</button>");
+			} else {
+				$(".answer").html("<p>The answer was " + input[currentQuestion].answer + "<br>" + input[currentQuestion].incorrect + "</p>");
+			}
 		}
 		
 	} else {
 		console.log("NOOOO");
 	}
-		/*for (i=0; i < input.length; i++) {
-			console.log(input[i].answer);
-			console.log(ans);
-
-			if (ans == input[i].answer) {
-				$(".answer").html("<p>" + input[i].correct + "</p>");
-				currentQuestion++;
-
-			} else {
-				$(".answer").html("<p>" + input[i].incorrect + "</p>");
-				currentQuestion++;
-			}
-			displayQuestion();
-		}
-		return false;
-	} else {
-		console.log("NOOOO");
-	}*/
 }
 
 function nextQuestion() {
-	$("#next").click(function() {
 		currentQuestion++;
 		displayQuestion();
-	});
 }
 
 $(document).ready(function(){
