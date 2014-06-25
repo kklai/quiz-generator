@@ -9,15 +9,17 @@ function init() {
 // read data
 var input;
 var ans;
+var score = 0;
 var currentQuestion = 0;
+
 function readData(data, tabletop) { 
-	console.log(data);
 	input = data;
 	displayQuestion();
 }
 
 function displayQuestion() {
-	$(".content").html("<h3 class='question'>" + input[currentQuestion].question + "</h3>" +
+	$(".quiz").html("<h3 class='question'>" + (currentQuestion+1) + ". " + input[currentQuestion].question + "</h3>" +
+		"<p class='score'>Score: " + score + "</p>" +
 		"<span id='option-a'>" + input[currentQuestion].a + "</span><br />" +
 		"<span id='option-b'>" + input[currentQuestion].b + "</span><br />" +
 		"<span id='option-c'>" + input[currentQuestion].c + "</span><br />" +
@@ -26,7 +28,11 @@ function displayQuestion() {
 		"<button id='submit'>Check my answer</button>" +
 		"<div class='answer'></div>");
 	selectAnswer();
-	buttonClick();
+	submitAnswer();
+}
+
+function displayScore(){
+    $('.score').html("<p>Score: " + score + "</p>");
 }
 
 function selectAnswer() {
@@ -40,7 +46,7 @@ function showHint() {
 	$(".answer").html(input[currentQuestion].hint);
 }
 
-function buttonClick() {
+function submitAnswer() {
 	$("#submit").click(function() {
 		checkAnswer();
 	});
@@ -50,19 +56,21 @@ function checkAnswer() {
 	if ($(".selected").length > 0) {
 		ans = $(".selected").html();
 		if (ans == input[currentQuestion].answer) {
-			if (currentQuestion != (input.length-1)) {
-				$(".answer").html("<p>The answer was " + input[currentQuestion].answer + "<br>" + input[currentQuestion].correct + "</p>" + "<button id='next' onclick='nextQuestion()'>Next</button>");
-			} else {
-				$(".answer").html("<p>The answer was " + input[currentQuestion].answer + "<br>" + input[currentQuestion].correct + "</p>");
-			}
+			// increment score
+			score+=10;
+			displayScore();
+
+			$(".answer").html("<p>CORRECT! " + input[currentQuestion].correct + "</p><p>Correct Answer: " + input[currentQuestion].answer + "</p>");
 		} else {
-			if (currentQuestion != (input.length-1)) {
-				$(".answer").html("<p>The answer was " + input[currentQuestion].answer + "<br>" + input[currentQuestion].incorrect + "</p>" + "<button id='next' onclick='nextQuestion()'>Next</button>");
-			} else {
-				$(".answer").html("<p>The answer was " + input[currentQuestion].answer + "<br>" + input[currentQuestion].incorrect + "</p>");
-			}
+			$(".answer").html("<p>INCORRECT! " + input[currentQuestion].incorrect + "</p><p>Correct Answer: " + input[currentQuestion].answer + "</p>");
 		}
-		
+
+		// 'next' button
+		if (currentQuestion != (input.length-1)) {
+			$(".answer").append("<button id='next' onclick='nextQuestion()'>Next</button>");
+		} else {
+			$(".answer").append("<p></p>");
+		}
 	} else {
 		console.log("NOOOO");
 	}
