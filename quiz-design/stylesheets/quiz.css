@@ -100,8 +100,7 @@ ol.answers > li:hover {
   padding: .7em .7em .6em;
   border: 0;
   text-transform: uppercase;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 20px 20px 30px 0px;
   display: inline-block;
   cursor: pointer;
 }
