@@ -60,7 +60,7 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 activate :directory_indexes
-set :build_dir, "tmp"
+# set :build_dir, "build"
 
 # Build-specific configuration
 configure :build do
