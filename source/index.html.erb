@@ -1,34 +1,37 @@
----
-title: Quiz Generator
----
-<nav class="m-sticky-nav">
-  <a class="m-sticky-nav__logo" href="">vox</a>
-  <ul class="social">
-    <li><a class="icon-twitter" data-social="Twitter" href="javascript:void(0);" onclick="window.open( 'http://www.twitter.com/intent/tweet?text=40 maps that explain the Middle East&url=http://www.vox.com/a/maps-explain-the-middle-east','','width=550, height=350, scrollbars=no' )"></a></li>
-    <li><a class="icon-facebook" data-social="Facebook" href="jav2ascript:void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://www.vox.com/a/maps-explain-the-middle-east'), 'facebook-share-dialog', 'width=626,height=436'); return false;"></a></li>
-  </ul>
-</nav>
+<h1>Make a quiz here</h1>
+
 <div class="feature-body">
+<h5>Google Spreadsheet URL:&nbsp;&nbsp;&nbsp;<input type="text" id="url">&nbsp;&nbsp;&nbsp;<button id="build" onclick="buildquiz()">Build quiz!</button></h5>
 
-	<header>
-	    <h1 class="show-at-large">Test yourself before you<br> wreck yourself</h1>
-	    <h1 class="hide-at-large">Test yourself before you wreck yourself</h1>
-	    <h3>by <a href="http://www.vox.com/authors/max-fisher">Max Fisher</a> on May  5, 2014</h3>
-  </header>
+<div class="embed" style="margin-top: 30px;">
+  <h5>Embed code:</h5>
+  <p><textarea type="text" name="embedcode" id="embedcode" row="8" cols="100"></textarea></p>
+</div>
 
-  <div class="quiz">
-    <p><%= data['Sheet1'][0].question %></p>
-    <ul>
-      <li><p><%= data['Sheet1'][0].a %></p></li>
-      <li><p><%= data['Sheet1'][0].b %></p></li>
-      <li><p><%= data['Sheet1'][0].c %></p></li>
-      <li><p><%= data['Sheet1'][0].d %></p></li>
-    </ul>
+  <div class="quiz" style="margin: 30px 0 0 0;">
+    <h5 style="margin-bottom: 10px;">Preview</h5>
   </div>
+
 </div>
 
 <script type="text/javascript">
+  var key;
+
+  function embed() {
+    // generate embed code
+  }
+
+  function preview() {
+    // generate quiz preview
+  }
+
+  function buildquiz(){
+    url = $('#url').val();
+    embed();
+    $("#embedcode").html(url);
+  }
+
   $(document).ready(function(){
-    // do stuff here
   })
+
 </script>
