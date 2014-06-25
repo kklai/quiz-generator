@@ -87,9 +87,15 @@ ol.answers > li:hover {
 	background-color:#bfd1df;
 }
 
+#hintbody {
+	display:none;
+}
+
 #wronganswer, #rightanswer {
 	display:none;
 	width:75%;
 	text-align:left;
 	margin:0 auto;
+	margin: 0px auto;
+	width: 65%;
 }

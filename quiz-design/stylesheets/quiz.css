@@ -98,9 +98,16 @@ ol.answers > li:hover {
 }
 
 /* line 90, ../sass/quiz.scss */
+#hintbody {
+  display: none;
+}
+
+/* line 94, ../sass/quiz.scss */
 #wronganswer, #rightanswer {
   display: none;
   width: 75%;
   text-align: left;
   margin: 0 auto;
+  margin: 0px auto;
+  width: 65%;
 }
