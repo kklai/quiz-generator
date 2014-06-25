@@ -5,7 +5,7 @@ title: Quiz Generator
   <a class="m-sticky-nav__logo" href="">vox</a>
   <ul class="social">
     <li><a class="icon-twitter" data-social="Twitter" href="javascript:void(0);" onclick="window.open( 'http://www.twitter.com/intent/tweet?text=40 maps that explain the Middle East&url=http://www.vox.com/a/maps-explain-the-middle-east','','width=550, height=350, scrollbars=no' )"></a></li>
-    <li><a class="icon-facebook" data-social="Facebook" href="javascript:void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://www.vox.com/a/maps-explain-the-middle-east'), 'facebook-share-dialog', 'width=626,height=436'); return false;"></a></li>
+    <li><a class="icon-facebook" data-social="Facebook" href="jav2ascript:void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://www.vox.com/a/maps-explain-the-middle-east'), 'facebook-share-dialog', 'width=626,height=436'); return false;"></a></li>
   </ul>
 </nav>
 <div class="feature-body">
@@ -17,5 +17,18 @@ title: Quiz Generator
   </header>
 
   <div class="quiz">
+    <p><%= data['Sheet1'][0].question %></p>
+    <ul>
+      <li><p><%= data['Sheet1'][0].a %></p></li>
+      <li><p><%= data['Sheet1'][0].b %></p></li>
+      <li><p><%= data['Sheet1'][0].c %></p></li>
+      <li><p><%= data['Sheet1'][0].d %></p></li>
+    </ul>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    // do stuff here
+  })
+</script>

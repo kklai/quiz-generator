@@ -15,6 +15,14 @@
   </head>
   
   <body id="top" class="index <%= page_classes %>">
+
+    <nav class="m-sticky-nav">
+  <a class="m-sticky-nav__logo" href="">vox</a>
+  <ul class="social">
+    <li><a class="icon-twitter" data-social="Twitter" href="javascript:void(0);" onclick="window.open( 'http://www.twitter.com/intent/tweet?text=40 maps that explain the Middle East&url=http://www.vox.com/a/maps-explain-the-middle-east','','width=550, height=350, scrollbars=no' )"></a></li>
+    <li><a class="icon-facebook" data-social="Facebook" href="jav2ascript:void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://www.vox.com/a/maps-explain-the-middle-east'), 'facebook-share-dialog', 'width=626,height=436'); return false;"></a></li>
+  </ul>
+</nav>
     <%= yield %>
   </body>
 </html>
