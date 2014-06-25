@@ -130,3 +130,9 @@ ol.answers > li:hover {
 .answer > p {
   margin: 20px 0 20px 0px;
 }
+
+.score {
+  float: right;
+  padding: 15px 20px 0 0;
+  font-size: 14px;
+}

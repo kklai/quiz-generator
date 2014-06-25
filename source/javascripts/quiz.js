@@ -8,6 +8,7 @@ function init() {
 // read data
 var input;
 var ans;
+var score = 0;
 var currentQuestion = 0;
 function readData(data, tabletop) { 
 	console.log(data);
@@ -17,7 +18,7 @@ function readData(data, tabletop) {
 
 function displayQuestion() {
 	qnumber = currentQuestion + 1;
-	$(".quiz-container").html("<div class='qhead'><div class='number'>" + qnumber + "</div></div><div class='question'>" + input[currentQuestion].question + "</div>" +
+	$(".quiz-container").html("<div class='qhead'><div class='number'>" + qnumber + "</div><p class='score'>Score: " + score + "/" + input.length + "</p></div><div class='question'>" + input[currentQuestion].question + "</div>" +
 		"<ol class='answers'><li id='option-a'>" + input[currentQuestion].a + "</li>" +
 		"<li id='option-b'>" + input[currentQuestion].b + "</li>" +
 		"<li id='option-c'>" + input[currentQuestion].c + "</li>" +
@@ -26,7 +27,11 @@ function displayQuestion() {
 		"<button id='submit' class='hintbutton'>Check my answer</button>" +
 		"<div class='answer'></div>");
 	selectAnswer();
-	buttonClick();
+	submitAnswer();
+}
+
+function displayScore(){
+    $('.score').html("<p>Score: " + score + "/" + input.length + "</p>");
 }
 
 function selectAnswer() {
@@ -40,7 +45,7 @@ function showHint() {
 	$(".answer").html(input[currentQuestion].hint);
 }
 
-function buttonClick() {
+function submitAnswer() {
 	$("#submit").click(function() {
 		checkAnswer();
 	});
@@ -50,21 +55,21 @@ function checkAnswer() {
 	if ($(".selected").length > 0) {
 		ans = $(".selected").html();
 		if (ans == input[currentQuestion].answer) {
-			if (currentQuestion != (input.length-1)) {
-				$(".answer").html("<p>The answer was " + input[currentQuestion].answer + "<br>" + input[currentQuestion].correct + "</p>" + "<button id='next' onclick='nextQuestion()'>Next</button>");
-			} else {
-				$(".answer").html("<p>The answer was " + input[currentQuestion].answer + "<br>" + input[currentQuestion].correct + "</p>");
-			}
+			// increment score
+			score++;
+			displayScore();
+
+			$(".answer").html("<p>CORRECT! " + input[currentQuestion].correct + "</p><p>Correct Answer: " + input[currentQuestion].answer + "</p>");
 		} else {
-			if (currentQuestion != (input.length-1)) {
-				$(".answer").html("<p>The answer was " + input[currentQuestion].answer + "<br>" + input[currentQuestion].incorrect + "</p>" + "<button id='next' onclick='nextQuestion()'>Next</button>");
-			} else {
-				$(".answer").html("<p>The answer was " + input[currentQuestion].answer + "<br>" + input[currentQuestion].incorrect + "</p><p>Thanks for doing this quiz!");
-			}
+			$(".answer").html("<p>INCORRECT! " + input[currentQuestion].incorrect + "</p><p>Correct Answer: " + input[currentQuestion].answer + "</p>");
 		}
-		
-	} else {
-		console.log("NOOOO");
+
+		// 'next' button
+		if (currentQuestion != (input.length-1)) {
+			$(".answer").append("<button id='next' onclick='nextQuestion()'>Next</button>");
+		} else {
+			$(".answer").append("<p>Thanks for doing this quiz!</p>");
+		}
 	}
 }
 
