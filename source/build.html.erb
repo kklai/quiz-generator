@@ -1,23 +1,15 @@
 <h1>Make a quiz here</h1>
 
 <div class="feature-body">
-<h5>Google Spreadsheet Key:&nbsp;&nbsp;&nbsp;<input type="text" id="spreadsheetkey">&nbsp;&nbsp;&nbsp;<button class="build">Build quiz!</button></h5>
+<h5>Google Spreadsheet Key:&nbsp;&nbsp;&nbsp;<input type="text" id="spreadsheetkey">&nbsp;&nbsp;&nbsp;<button id="build">Build quiz!</button></h5>
 
 <div class="embed" style="margin-top: 30px;">
 	<h5>Embed code:</h5>
-	<p><textarea type="text" name="embedcode" row="8" cols="100">
-	</textarea></p>
+	<p><textarea type="text" name="embedcode" id="embedcode" row="8" cols="100"></textarea></p>
 </div>
 
 	<div class="quiz" style="margin: 30px 0 0 0;">
 		<h5 style="margin-bottom: 10px;">Preview</h5>
-    <p><%= data['Sheet1'][0].question %></p>
-    <ul>
-      <li><p><%= data['Sheet1'][0].a %></p></li>
-      <li><p><%= data['Sheet1'][0].b %></p></li>
-      <li><p><%= data['Sheet1'][0].c %></p></li>
-      <li><p><%= data['Sheet1'][0].d %></p></li>
-    </ul>
   </div>
 
 </div>
@@ -27,11 +19,18 @@
 	function getkey(){
 		key = $('#spreadsheetkey').val();
 	}
+
+	function embed() {
+
+	}
 	
+	$('#build').click(function(){
+		getkey();
+		embed();
+		$("#embedcode").html(embedcode);
+	})
+
 	$(document).ready(function(){
-		$('.build').click(function(){
-			getkey();
-		})
 	})
 
 </script>
