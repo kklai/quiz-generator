@@ -14,5 +14,5 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 gem "tzinfo-data", platforms: [:mswin, :mingw]
 
 #vox stuff
-gem "middleman-chorus", :git => "git@github.com:voxmedia/middleman-chorus.git"
-gem "vox-google-drive", :git => "git@github.com:voxmedia/vox-google-drive.git"
+# gem "middleman-chorus", :git => "git@github.com:voxmedia/middleman-chorus.git"
+# gem "vox-google-drive", :git => "git@github.com:voxmedia/vox-google-drive.git"
