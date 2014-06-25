@@ -19,7 +19,7 @@ function readData(data, tabletop) {
 
 function displayQuestion() {
 	$(".quiz").html("<h3 class='question'>" + (currentQuestion+1) + ". " + input[currentQuestion].question + "</h3>" +
-		"<p class='score'>Score: " + score + "</p>" +
+		"<p class='score'>Score: " + score + "/" + input.length + "</p>" +
 		"<span id='option-a'>" + input[currentQuestion].a + "</span><br />" +
 		"<span id='option-b'>" + input[currentQuestion].b + "</span><br />" +
 		"<span id='option-c'>" + input[currentQuestion].c + "</span><br />" +
@@ -32,7 +32,7 @@ function displayQuestion() {
 }
 
 function displayScore(){
-    $('.score').html("<p>Score: " + score + "</p>");
+    $('.score').html("<p>Score: " + score + "/" + input.length + "</p>");
 }
 
 function selectAnswer() {
@@ -57,7 +57,7 @@ function checkAnswer() {
 		ans = $(".selected").html();
 		if (ans == input[currentQuestion].answer) {
 			// increment score
-			score+=10;
+			score++;
 			displayScore();
 
 			$(".answer").html("<p>CORRECT! " + input[currentQuestion].correct + "</p><p>Correct Answer: " + input[currentQuestion].answer + "</p>");
@@ -71,8 +71,6 @@ function checkAnswer() {
 		} else {
 			$(".answer").append("<p></p>");
 		}
-	} else {
-		console.log("NOOOO");
 	}
 }
 
