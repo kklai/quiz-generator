@@ -1,7 +1,19 @@
+.title {
+	font-family: Balto, sans-serif;
+	font-weight: bold;
+	color: #4c4e4d;
+	font-size:2.3em;
+	width:100%;
+	display:inline-block;
+	text-align:center;
+}
+
 .quiz-container {
 	background-color:#ffffff;
 	width:50%;
 	margin:0% auto;
+	margin-top:20px;
+	margin-top:20px;
 	text-align:center;
 	padding:0px 20px;
 }
@@ -12,7 +24,7 @@
 	}
 
 .number {
-	margin-left:10%;
+	margin-left:7%;
 	display:inline-block;
 	background-color:#bfd1df;
 	width:60px;
@@ -22,6 +34,7 @@
 	line-height:0.5em;
 	padding-top:5px;
 	padding-bottom:15px;
+	display:inline-block;
 	}
 
 .question {
