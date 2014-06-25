@@ -47,9 +47,9 @@
 #   end
 # end
 
-helpers Middleman::Chorus::GoogleDrive::Helpers
-spreadsheet_id = "1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw"
-load_spreadsheet("Sheet1", spreadsheet_id, :gid => 0)
+# helpers Middleman::Chorus::GoogleDrive::Helpers
+# spreadsheet_id = "1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw"
+# load_spreadsheet("Sheet1", spreadsheet_id, :gid => 0)
 
 # data.Sheet1['question']
 
@@ -58,6 +58,9 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+activate :directory_indexes
+set :build_dir, "tmp"
 
 # Build-specific configuration
 configure :build do
