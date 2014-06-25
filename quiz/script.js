@@ -22,6 +22,7 @@ function displayQuestion() {
 		"<span id='option-b'>" + input[currentQuestion].b + "</span><br />" +
 		"<span id='option-c'>" + input[currentQuestion].c + "</span><br />" +
 		"<span id='option-d'>" + input[currentQuestion].d + "</span><br />" +
+		"<button id='hint' onclick='showHint()'>Need a hint?</button>" + 
 		"<button id='submit'>Check my answer</button>" +
 		"<div class='answer'></div>");
 	selectAnswer();
@@ -35,13 +36,15 @@ function selectAnswer() {
 	});
 }
 
+function showHint() {
+	$(".answer").html(input[currentQuestion].hint);
+}
+
 function buttonClick() {
 	$("#submit").click(function() {
 		checkAnswer();
 	});
 }
-
-
 
 function checkAnswer() {
 	if ($(".selected").length > 0) {
@@ -66,8 +69,8 @@ function checkAnswer() {
 }
 
 function nextQuestion() {
-		currentQuestion++;
-		displayQuestion();
+	currentQuestion++;
+	displayQuestion();
 }
 
 $(document).ready(function(){
