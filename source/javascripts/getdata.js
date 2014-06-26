@@ -9,4 +9,5 @@ function init() {
 function readData(data, tabletop) { 
 	console.log(data);
 	input = data;
+	buildQuiz();
 }

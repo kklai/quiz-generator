@@ -1,22 +1,9 @@
-// initialize tabletop library
-function init() {
-		Tabletop.init( { key: url,
-                   callback: readData,
-                   simpleSheet: true } );
-	}
-
 // read data
-var input;
 var ans;
 var score = 0;
 var currentQuestion = 0;
-function readData(data, tabletop) { 
-	console.log(data);
-	input = data;
-	displayQuestion();
-}
 
-function displayQuestion() {
+function buildQuiz() {
 	qnumber = currentQuestion + 1;
 	$(".quiz-container").html("<div class='qhead'><div class='number'>" + qnumber + "</div><p class='score'>Score: " + score + "/" + input.length + "</p></div><div class='question'>" + input[currentQuestion].question + "</div>" +
 		"<ol class='answers'><li id='option-a'>" + input[currentQuestion].a + "</li>" +
@@ -76,7 +63,7 @@ function checkAnswer() {
 
 function nextQuestion() {
 	currentQuestion++;
-	displayQuestion();
+	buildQuiz();
 }
 
 function addcss(url) {
