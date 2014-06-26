@@ -9,12 +9,12 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Quiz Generator" %></title>
     
-    <%= stylesheet_link_tag "vox_universal", "vox", "vox_print", "40maps_styles", "quiz" %>
+    <%= stylesheet_link_tag "quiz" %>
 
     <%= javascript_include_tag  "jquery.min.js", "tabletop", "quiz" %>
   </head>
   
-  <body id="top" class="index <%= page_classes %>">
+  <body id="top" class="index <%= page_classes %>" style="background-color: #f1f3f2;">
     <%= yield %>
   </body>
 </html>
