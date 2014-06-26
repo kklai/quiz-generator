@@ -24,6 +24,11 @@ button {
   color: #fff;
 }
 
+button a {
+	text-decoration: none;
+	color: #fff;
+}
+
 h1 {
 	font-family: "Balto";
 	font-weight: bold;
