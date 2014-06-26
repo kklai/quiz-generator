@@ -22,9 +22,9 @@ function displayQuestion() {
 		"<ol class='answers'><li id='option-a'>" + input[currentQuestion].a + "</li>" +
 		"<li id='option-b'>" + input[currentQuestion].b + "</li>" +
 		"<li id='option-c'>" + input[currentQuestion].c + "</li>" +
-		"<li id='option-d'>" + input[currentQuestion].d + "</li></ol>" + 
+		"<li id='option-d'>" + input[currentQuestion].d + "</li></ol>" +
+		"<button id='hint' class='hintbutton' onclick='showHint()'>Need a hint?</button>" +
 		"<button id='submit' class='hintbutton'>Submit answer</button>" +
-		"<button id='hint' class='hintbutton' onclick='showHint()'>Get a hint</button>" +
 		"<div class='answer'></div>");
 	selectAnswer();
 	submitAnswer();
