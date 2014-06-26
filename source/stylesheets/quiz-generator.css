@@ -5,6 +5,11 @@ body {
 	padding-top: 30px;
 }
 
+.container {
+	width: 60%;
+	margin: 0 auto;
+}
+
 button {
 	/*font-size: .8em;*/
   line-height: 1;
@@ -47,4 +52,17 @@ span.link {
 #build {
 	font-size: 1em;
 	background-color: #f27421;
+}
+
+@media screen and (max-width: 960px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 500px) {
+	body {
+		padding: 0px;
+	}
+	.container {
+		width: 90%;
+	}
 }
