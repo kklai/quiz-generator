@@ -5,13 +5,46 @@ body {
 	padding-top: 30px;
 }
 
+button {
+	/*font-size: .8em;*/
+  line-height: 1;
+  padding: .7em .7em .6em .6em;
+  border: 0;
+  /*text-transform: uppercase;*/
+  display: inline-block;
+  cursor: pointer;
+  /*width:160px;*/
+  margin:2px 5px;
+  display:inline-block;
+  color: #fff;
+}
+
 h1 {
 	font-family: "Balto";
 	font-weight: bold;
 	color: #414141;
-	border-bottom: 2px solid yellow;
+	border-bottom: 2px solid #f27421;
+}
+
+h5 {
+	font-size: 16px;
+	margin-bottom: 3px;
 }
 
 input[type=radio]:not(:first-child) {
 	margin-left: 15px;
+}
+
+.try {
+	font-size: 12px;
+}
+
+span.link {
+	color: #414141;
+	font-style: italic;
+}
+
+#build {
+	font-size: 1em;
+	background-color: #f27421;
 }
