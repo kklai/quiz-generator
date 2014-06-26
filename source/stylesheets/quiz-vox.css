@@ -1,5 +1,4 @@
 .quiz-container {
-  background-color: #ffffff;
   font-family: Alright Sans ,sans-serif;
   color: #4c4e4d;
 }
@@ -59,7 +58,7 @@ ol.answers > li:hover {
 }
 
 .selected {
-  background-color: #dfdfe0;
+  background-color: #f7f7f7;
 }
 
 .answer > p {
@@ -70,6 +69,7 @@ ol.answers > li:hover {
   font-family:Harriet Display;
   font-style:italic;
   font-weight:bold;
+  display:none;
 }
 
 #social-media ul {
@@ -88,9 +88,6 @@ ol.answers > li:hover {
 }
 
 #social-media ul li a svg {
-  height: 2em;
-  width: 2em;
-  margin-right: 1em;
   fill:#4c4e4d;
 }
 
@@ -105,4 +102,8 @@ ol.answers > li:hover {
 
 .scorecard p:nth-child(2) {
   font-family:balto, sans-serif
+}
+
+.answer p:first-child {
+  font-family:Balto, sans-serif;
 }

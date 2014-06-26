@@ -1,9 +1,5 @@
 .quiz-container {
   border-top:7px solid #c52327;
-  width: 50%;
-  margin: 0% auto;
-  margin-top: 20px;
-  margin-bottom: 150px;
   text-align: center;
   font-family: "Gotham SSm A","Gotham SSm B",Arial,sans-serif;
 }
@@ -70,4 +66,8 @@ ol.answers > li:hover {
 
 #social-media ul li a svg path:hover {
   fill: #ffffff;
+}
+
+.answer p:first-child {
+  font-family: "Sentinel SSm A","Sentinel SSm B",Georgia,serif;
 }

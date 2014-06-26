@@ -52,9 +52,9 @@ function checkAnswer() {
 			score++;
 			displayScore();
 
-			$(".answer").html("<p>Correct! " + input[currentQuestion].correct + "</p><p>" + input[currentQuestion].answer + "</p>");
+			$(".answer").html("<p>Correct!</p><p>" + input[currentQuestion].correct + "</p>");
 		} else {
-			$(".answer").html("<p>Incorrect! " + input[currentQuestion].incorrect + "</p><p>Correct answer: " + input[currentQuestion].answer + "</p>");
+			$(".answer").html("<p>Sorry!</p><p> " + input[currentQuestion].incorrect + "</p><p>The correct answer is " + input[currentQuestion].answer + "</p>");
 		}
 
 		// 'next' button
