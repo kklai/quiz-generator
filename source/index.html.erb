@@ -1,9 +1,13 @@
 <div style="display: block; margin: 0 auto; width: 60%;">
 <h1><img src="images/qq.png" width="20" style="margin-right: 10px;">Quiz Quartet</h1>
+
 <h5>Google Spreadsheet Template: <button>Create Quiz Spreadsheet</button></h5>
+
 <p class="try">Or try this spreadsheet: <span class="link">https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml</span></p>
+
 <h5>Google Spreadsheet URL:&nbsp;&nbsp;&nbsp;<input type="text" id="url">&nbsp;&nbsp;&nbsp;</h5>
-<h5>Pick your publication: </h5>
+
+<h5>Choose Vertical: </h5>
 <form action="">
   <input type="radio" name="pub" value="vox">&nbsp;vox.com
   <input type="radio" name="pub" value="sbnation">&nbsp;sbnation.com
@@ -34,25 +38,13 @@
   }
 
   function embed() {
-    // generate embed code
     $("#embedcode").html("&lt;div class='quiz-container'></div>&lt;script type='text/javascript'>var input = " + JSON.stringify(input) + "; var pub_stylesheet = '" + pub_stylesheet + "';&lt;/script>&lt;/script>&lt;script src='https://s3-us-west-2.amazonaws.com/quiz-generator/quiz.js'>&lt;/script>&lt;script type='text/javascript'>$(document).ready(function(){ url = 'https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml'; quiz(); }) &lt;/script>");
-  }
-
-  function preview() {
-    // generate quiz preview
-    // url = "https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml";
-    init();
   }
 
   function buildquiz(){
     url = $('#url').val();
     init();
     getStylesheet();
-    embed();
-    preview();
   }
-
-  $(document).ready(function(){
-  });
 
 </script>
