@@ -112,7 +112,8 @@ ol.answers > li:hover {
 }
 
 .selected {
-  background-color: yellow;
+  background-color: #dfdfe0;
+  font-weight: bold;
 }
 
 .answer > p {

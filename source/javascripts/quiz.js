@@ -38,6 +38,7 @@ function selectAnswer() {
 	$("li").click(function() {
 		$(".selected").removeClass("selected");
 		$(this).addClass("selected");
+		$("#submit").css("background-color", "#dfdfe0").fadeIn();
 	});
 }
 
