@@ -22,9 +22,9 @@ function displayQuestion() {
 		"<ol class='answers'><li id='option-a'>" + input[currentQuestion].a + "</li>" +
 		"<li id='option-b'>" + input[currentQuestion].b + "</li>" +
 		"<li id='option-c'>" + input[currentQuestion].c + "</li>" +
-		"<li id='option-d'>" + input[currentQuestion].d + "</li></ol>" +
-		"<button id='hint' class='hintbutton' onclick='showHint()'>Need a hint?</button>" + 
-		"<button id='submit' class='hintbutton'>Check my answer</button>" +
+		"<li id='option-d'>" + input[currentQuestion].d + "</li></ol>" + 
+		"<button id='submit' class='hintbutton'>Submit answer</button>" +
+		"<button id='hint' class='hintbutton' onclick='showHint()'>Get a hint</button>" +
 		"<div class='answer'></div>");
 	selectAnswer();
 	submitAnswer();
@@ -66,7 +66,7 @@ function checkAnswer() {
 
 		// 'next' button
 		if (currentQuestion != (input.length-1)) {
-			$(".answer").append("<button id='next' onclick='nextQuestion()'>Next</button>");
+			$(".answer").append("<button id='next' class='hintbutton' onclick='nextQuestion()'>Next</button>");
 		} else {
 			$(".answer").append("<p>Thanks for doing this quiz!</p>");
 		}
