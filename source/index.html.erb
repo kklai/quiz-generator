@@ -4,10 +4,10 @@
 <h5>Google Spreadsheet URL:&nbsp;&nbsp;&nbsp;</h5><input type="text" id="url">&nbsp;&nbsp;&nbsp;
 <h5>Pick your publication: </h5>
 <form action="">
-<input type="radio" name="pub" value="vox">vox.com&nbsp;&nbsp;&nbsp;
-<input type="radio" name="pub" value="sbnation">sbnation.com&nbsp;&nbsp;&nbsp;
-<input type="radio" name="pub" value="verge">verge.com&nbsp;&nbsp;&nbsp;
-<input type="radio" name="pub" value="polygon">polygon.com&nbsp;&nbsp;&nbsp;
+  <input type="radio" name="pub" value="vox">&nbsp;vox.com
+  <input type="radio" name="pub" value="sbnation">&nbsp;sbnation.com
+  <input type="radio" name="pub" value="verge">&nbsp;verge.com
+  <input type="radio" name="pub" value="polygon">&nbsp;polygon.com
 </form>
 <br>
 <button id="build" onclick="buildquiz()">Build quiz!</button>
@@ -39,19 +39,19 @@
 
   function preview() {
     // generate quiz preview
-    url = "https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml";
+    // url = "https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml";
     init();
   }
 
   function buildquiz(){
     url = $('#url').val();
-    getStylesheet();
     init();
+    getStylesheet();
     embed();
+    preview();
   }
 
   $(document).ready(function(){
-    preview();
   });
 
 </script>
