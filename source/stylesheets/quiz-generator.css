@@ -52,6 +52,7 @@ input[type=radio]:not(:first-child) {
 .try {
 	font-size: 12px;
 	word-wrap: break-word;
+	font-weight: lighter;
 }
 
 span.link {
