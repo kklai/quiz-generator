@@ -1,6 +1,7 @@
 .quiz-container {
   background-color: #ffffff;
   font-family: Alright Sans ,sans-serif;
+  color: #4c4e4d;
 }
 
 .qhead {
@@ -90,6 +91,7 @@ ol.answers > li:hover {
   height: 2em;
   width: 2em;
   margin-right: 1em;
+  fill:#4c4e4d;
 }
 
 #social-media ul li a svg:hover {
@@ -99,4 +101,8 @@ ol.answers > li:hover {
 
 #social-media ul li a svg path:hover {
   fill: #ffffff;
+}
+
+.scorecard p:nth-child(2) {
+  font-family:balto, sans-serif
 }
