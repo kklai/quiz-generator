@@ -96,3 +96,16 @@ ol.answers > li {
   max-width:550px;
   margin:0% auto;
 }
+
+.scorecard p:nth-child(1) {
+  font-weight:bold;
+  margin-top:30px;
+}
+
+.scorecard p:nth-child(2) {
+  font-size:3em;
+  font-weight:bold;
+  margin-bottom:30px;
+  margin-top:10px;
+  font-family:balto, sans-serif;
+}

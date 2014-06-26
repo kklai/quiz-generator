@@ -52,9 +52,9 @@ function checkAnswer() {
 			score++;
 			displayScore();
 
-			$(".answer").html("<p>CORRECT! " + input[currentQuestion].correct + "</p><p>Correct Answer: " + input[currentQuestion].answer + "</p>");
+			$(".answer").html("<p>Correct! " + input[currentQuestion].correct + "</p><p>" + input[currentQuestion].answer + "</p>");
 		} else {
-			$(".answer").html("<p>INCORRECT! " + input[currentQuestion].incorrect + "</p><p>Correct Answer: " + input[currentQuestion].answer + "</p>");
+			$(".answer").html("<p>Incorrect! " + input[currentQuestion].incorrect + "</p><p>Correct answer: " + input[currentQuestion].answer + "</p>");
 		}
 
 		// 'next' button
@@ -73,7 +73,7 @@ function nextQuestion() {
 }
 
 function finalScore() {
-	$(".quiz-container").html("<div class='scorecard'><p>You correctly answered</p><p>" + score + "/" + input.length + "</p><div id='social-media'><ul><li>" + facebook + "</li><li>" + twitter + "</li><li>" + google + "</li></ul></div><p>Challenge your friends!</p></div>");
+	$(".quiz-container").html("<div class='scorecard'><p>You correctly answered</p><p>" + score + "&nbsp;out of&nbsp;" + input.length + "</p><div id='social-media'><ul><li>" + facebook + "</li><li>" + twitter + "</li><li>" + google + "</li></ul></div><p>Challenge your friends!</p></div>");
 }
 
 function quiz() {
