@@ -21,7 +21,7 @@
 
 /* line 21, ../sass/quiz.scss */
 .qhead {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   text-align: left;
 }
 
@@ -34,9 +34,9 @@
   text-align: center;
   font-family: Harriet Display, serif;
   font-size: 3em;
-  line-height: 0.5em;
-  padding-top: 5px;
-  padding-bottom: 15px;
+  line-height: 0.9em;
+  padding-top: 1px;
+  padding-bottom: 12px;
   display: inline-block;
 }
 
@@ -47,7 +47,7 @@
   color: #4c4e4d;
   font-size: 1.17em;
   margin: 0% auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* line 49, ../sass/quiz.scss */
@@ -104,11 +104,12 @@ ol.answers > li:hover {
   cursor: pointer;
   width:160px;
   margin:0px 5px 20px;
+  display:inline-block;
 }
 
 /* line 99, ../sass/quiz.scss */
 .hintbutton:hover {
-  background-color: #bfd1df;
+  background-color: #bfd1df !important;
 }
 
 .selected {
