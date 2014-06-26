@@ -1,7 +1,6 @@
-var ans;
+var ans, qnumber, pub_stylesheet;
 var score = 0;
 var currentQuestion = 0;
-var pub_stylesheet;
 
 // social media
 var facebook = "<a href='https://www.facebook.com/Vox' target='_blank'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' style='height: 2em;'><circle cx='8' cy='8' r='8' class='shape-1'></circle><path fill='#fff' d='M8.5 3.7h1.4v1.6h-1c-.2 0-.4.1-.4.4v.9h1.4l-.1 1.7h-1.3v4.5h-1.9v-4.5h-.9v-1.7h.9v-1c0-.7.4-1.9 1.9-1.9z' class='shape-2'></path></svg></a>";
@@ -23,7 +22,7 @@ function buildQuiz() {
 }
 
 function displayScore(){
-    $('.score').html("<p>Score: " + score + "/" + input.length + "</p>");
+	$('.score').html("<p>Score: " + score + "/" + input.length + "</p>");
 }
 
 function selectAnswer() {
@@ -48,16 +47,12 @@ function checkAnswer() {
 	if ($(".selected").length > 0) {
 		ans = $(".selected").html();
 		if (ans == input[currentQuestion].answer) {
-			// increment score
 			score++;
 			displayScore();
-
 			$(".answer").html("<p>Correct! " + input[currentQuestion].correct + "</p><p>" + input[currentQuestion].answer + "</p>");
 		} else {
 			$(".answer").html("<p>Incorrect! " + input[currentQuestion].incorrect + "</p><p>Correct answer: " + input[currentQuestion].answer + "</p>");
 		}
-
-		// 'next' button
 		if (currentQuestion != (input.length-1)) {
 			$(".answer").append("<button id='next' class='hintbutton' onclick='nextQuestion()'>Next</button>");
 		} else {
