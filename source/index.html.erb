@@ -1,7 +1,10 @@
 <div class="container">
 <h1><img src="images/qq.png" width="20" style="margin-right: 10px;">Quiz Quartet</h1>
 
-<h5>Google Spreadsheet Template: <button>Create Quiz Spreadsheet</button></h5>
+<h5>Google Spreadsheet Template: <button><a href="https://drive.google.com/previewtemplate?id=0AlMgrVuuAI0MdGl6NngwMGYtX3RHQjlic0xzNnBjUGc&mode=public" target="_new">Create Quiz Spreadsheet</a></button></h5>
+
+
+<p>Once you're done editing, make sure to publish the spreadsheet to the web. Under the "File" menu, select "Publish top the Web." Click "Start Publishing" and copy the URL to build the quiz.</p>
 
 <p class="try">Or try this spreadsheet: <i>https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml</i></p>
 
@@ -17,7 +20,7 @@
 <br>
 <button id="build" onclick="buildquiz()">Build quiz!</button>
 <div class="embed" style="margin-top: 30px; margin-bottom: 60px;">
-  <h5>Embed code:</h5>
+  <h5>Embed code: <span class="try">(This embed code assumes that jquery is loaded on the page already.)</span></h5>
   <p><textarea type="text" name="embedcode" id="embedcode" style="width: 100%; height: 200px;"></textarea></p>
 </div>
 <hr>
@@ -29,16 +32,16 @@
 
 <script type="text/javascript">
   var key;
-  var pub_stylesheet = 'stylesheets/quiz-vox.css';
+  var pubStylesheet = 'stylesheets/quiz-vox.css';
   var pub;
 
   function getStylesheet() {
     pub = $('input[name="pub"]:checked').val();
-    pub_stylesheet = "quiz-" + pub + ".css";
+    pubStylesheet = "quiz-" + pub + ".css";
   }
 
   function embed() {
-    $("#embedcode").html("&lt;div class='quiz-container'></div>&lt;script type='text/javascript'>var input = " + JSON.stringify(input) + "; var pub_stylesheet = '" + pub_stylesheet + "';&lt;/script>&lt;/script>&lt;script src='https://s3-us-west-2.amazonaws.com/quiz-generator/quiz.js'>&lt;/script>&lt;script type='text/javascript'>$(document).ready(function(){ url = 'https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml'; quiz(); }) &lt;/script>");
+    $("#embedcode").html("&lt;div class='quiz-container'></div>&lt;script type='text/javascript'>var input = " + JSON.stringify(input) + "; var pub_stylesheet = '" + pubStylesheet + "';&lt;/script>&lt;/script>&lt;script src='https://s3-us-west-2.amazonaws.com/quiz-generator/quiz.js'>&lt;/script>");
   }
 
   function buildquiz(){

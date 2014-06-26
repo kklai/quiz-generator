@@ -1,0 +1,23 @@
+<!DOCYTPE html>
+<html>
+	<head>
+	</head>
+
+	<body>
+		<p id="tweet-score">Tweet Score</p>
+		<p id="fb-score">Share Score on Facebook</p>
+		<p id="google-score">Share Score on Google+</p>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			var score = 3;
+			var total = 5;
+			var link = "http://quiz-generator.herokuapp.com";
+			$(document).ready(function() {
+				$("#tweet-score").html("<p><a href='http://twitter.com/home?status=I scored " + score + "/" + total + " on this quiz " + link + " via @voxproduct' target='_blank'>Tweet Score</a></p>");
+				$("#fb-score").html("<p><a href='http://www.facebook.com/sharer.php?u=" + link + "' target='_blank'>Share Score on Facebook</a></p>");
+				$("#google-score").html("<p><a href='blah' target='_blank'>Share Score on Google+</a></p>");
+			});
+		</script>
+	</body>
+</html>
