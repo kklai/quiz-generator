@@ -78,3 +78,7 @@ function nextQuestion() {
 	currentQuestion++;
 	displayQuestion();
 }
+
+function addcss(url) {
+	$('head').append("<link rel='stylesheet' type='text/css' href='" + url + "'");
+}
