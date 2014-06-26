@@ -24,18 +24,18 @@
 
 <script type="text/javascript">
   var key;
-  var stylesheet;
+  var pub_stylesheet = 'stylesheets/quiz-vox.css';
   var pub;
 
   function getStylesheet() {
     pub = $('input[name="pub"]:checked').val();
-    stylesheet = "quiz-" + pub + ".css";
-    console.log(stylesheet)
+    pub_stylesheet = "quiz-" + pub + ".css";
+    console.log(pub_stylesheet)
   }
 
   function embed() {
     // generate embed code
-    $("#embedcode").html("&lt;div class='quiz-container'></div>&lt;script type='text/javascript'>var input = " + JSON.stringify(input) + " var pub_stylesheet = '" + stylesheet + "'&lt;/script>&lt;/script>&lt;script src='https://s3-us-west-2.amazonaws.com/quiz-generator/quiz.js'>&lt;/script>&lt;script type='text/javascript'>$(document).ready(function(){ addcss('https://s3-us-west-2.amazonaws.com/quiz-generator/quiz.css'); url = 'https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml'; buildQuiz(); }) &lt;/script>");
+    $("#embedcode").html("&lt;div class='quiz-container'></div>&lt;script type='text/javascript'>var input = " + JSON.stringify(input) + "; var pub_stylesheet = '" + pub_stylesheet + "';&lt;/script>&lt;/script>&lt;script src='https://s3-us-west-2.amazonaws.com/quiz-generator/quiz.js'>&lt;/script>&lt;script type='text/javascript'>$(document).ready(function(){ url = 'https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml'; quiz(); }) &lt;/script>");
   }
 
   function preview() {
@@ -49,7 +49,7 @@
     init();
   }
 
-  $(document).ready(function(){
+  $(window).load(function(){
     url = "https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml";
     init();
   });
