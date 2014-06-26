@@ -149,3 +149,11 @@ ol.answers > li:hover {
   width: 2em;
   margin-right: 1em;
 }
+
+#social-media ul li a svg:hover {
+  fill: #fff200;
+}
+
+#social-media ul li a svg path:hover {
+  fill: #f1f3f2;
+}
