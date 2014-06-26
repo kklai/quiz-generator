@@ -13,7 +13,6 @@
 .quiz-container {
   background-color: #ffffff;
   width: 100%;
-  max-width: 800px;
   margin: 0% auto;
   margin-top: 20px;
   margin-bottom: 150px;
@@ -127,25 +126,4 @@ ol.answers > li:hover {
   font-size: 14px;
   font-family:Harriet Display;
   font-style:italic;
-}
-
-#social-media ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-align: center;
-}
-
-#social-media ul li {
-  display: inline-block;
-}
-
-#social-media ul li a {
-  text-decoration: none;
-}
-
-#social-media ul li a svg {
-  height: 2em;
-  width: 2em;
-  margin-right: 1em;
 }

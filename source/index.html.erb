@@ -1,19 +1,35 @@
 <div style="display: block; margin: 0 auto; width: 60%;">
 <h1>Make a quiz here</h1>
 <p>Try this Spreadsheet! https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml</p>
-<h5>Google Spreadsheet URL:&nbsp;&nbsp;&nbsp;<input type="text" id="url">&nbsp;&nbsp;&nbsp;<button id="build" onclick="buildquiz()">Build quiz!</button></h5>
-
+<h5>Google Spreadsheet URL:&nbsp;&nbsp;&nbsp;</h5><input type="text" id="url">&nbsp;&nbsp;&nbsp;
+<h5>Pick your publication: </h5>
+<form action="">
+<input type="radio" name="pub" value="vox">vox.com&nbsp;&nbsp;&nbsp;
+<input type="radio" name="pub" value="sbnation">sbnation.com&nbsp;&nbsp;&nbsp;
+<input type="radio" name="pub" value="verge">verge.com&nbsp;&nbsp;&nbsp;
+<input type="radio" name="pub" value="polygon">polygon.com&nbsp;&nbsp;&nbsp;
+</form>
+<br>
+<button id="build" onclick="buildquiz()">Build quiz!</button>
 <div class="embed" style="margin-top: 30px; margin-bottom: 60px;">
   <h5>Embed code:</h5>
-  <p><textarea type="text" name="embedcode" id="embedcode" row="8" cols="100"></textarea></p>
+  <p><textarea type="text" name="embedcode" id="embedcode" row="10" cols="100" style="height: 200px;"></textarea></p>
+</div>
+<hr>
+<h5>Preview</h5>
 </div>
 
-</div>
 
 <div class="quiz-container"></div>
 
 <script type="text/javascript">
   var key;
+  var stylesheet;
+
+  function stylesheet() {
+    $('input[name="pub"]:checked').val();
+    stylesheet = "quiz-" + pub + ".css";
+  }
 
   function embed() {
     // generate embed code
