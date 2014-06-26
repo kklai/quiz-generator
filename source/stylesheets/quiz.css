@@ -136,10 +136,15 @@ ol.answers > li:hover {
 }
 
 #social-media ul li {
-  display: inline;
+  display: inline-block;
 }
 
 #social-media ul li a {
   text-decoration: none;
-  padding: .2em 1em;
+}
+
+#social-media ul li a svg {
+  height: 2em;
+  width: 2em;
+  margin-right: 1em;
 }

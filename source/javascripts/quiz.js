@@ -73,7 +73,7 @@ function nextQuestion() {
 }
 
 function finalScore() {
-	$(".quiz-container").html("<div class='scorecard'><p>You correctly answered</p><p>" + score + "/" + input.length + "</p><div id='social-media'><ul><li>" + facebook + "</li><li>" + twitter + "</li><li>" + google + "</li></ul></div></div>");
+	$(".quiz-container").html("<div class='scorecard'><p>You correctly answered</p><p>" + score + "/" + input.length + "</p><div id='social-media'><ul><li>" + facebook + "</li><li>" + twitter + "</li><li>" + google + "</li></ul></div><p>Challenge your friends!</p></div>");
 }
 
 function addcss(url) {
