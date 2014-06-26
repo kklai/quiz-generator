@@ -1,5 +1,5 @@
 .quiz-container {
-  border-top:1px solid #000000;
+  border-top:7px solid #c52327;
   width: 50%;
   margin: 0% auto;
   margin-top: 20px;
@@ -7,12 +7,11 @@
   text-align: center;
 }
 
-.qhead {
-  margin-bottom: 25px;
-  text-align: left;
+.number {
+  display:none;
 }
 
-.number {
+.qhead {
   display:none;
 }
 
@@ -24,36 +23,16 @@
   margin-bottom: 20px;
 }
 
-ol.answers {
-  position: relative;
-  cursor: pointer;
-  text-align: center;
-  list-style-type: none;
-  counter-reset: li-counter;
-  margin: 0px auto;
-  width: 65%;
-}
-
 ol.answers > li:before {
   font-family: "Sentinel SSm A","Sentinel SSm B",Georgia,serif;
   font-weight: bold;
   color: #ffffff;
-  font-size: 1em;
-  margin-right: 10px;
-  cursor: pointer;
   background-color: #c52327;
-  text-align: center;
   width: 30px;
-  display: inline-block;
-  content: counter(li-counter);
-  counter-increment: li-counter;
-  padding-top:3px;
 }
 
 ol.answers > li {
-  text-align: left;
-  margin: 20px 0px;
-  font-family: "Gotham Narrow SSm A","Gotham Narrow SSm B",Arial,sans-serif;
+  font-family: "Gotham SSm A","Gotham SSm B",Arial,sans-serif;
 }
 
 ol.answers > li:hover {
@@ -65,29 +44,14 @@ ol.answers > li:hover {
 }
 
 .hintbutton {
-  background-color: #eeeded;
-  color: #000000;
-  font-size: .9em;
-  line-height: 1;
+  background-color: #000000;
+  color: #ffffff;
   font-family: ff-din-web-condensed,helvetica,sans-serif;
   font-weight: 800;
-  padding: .7em .7em .6em;
-  border: 0;
-  text-transform: uppercase;
-  margin-top: 20px 20px 30px 0px;
-  display: inline-block;
-  cursor: pointer;
-  width:160px;
-  margin:0px 5px 20px;
-  display:inline-block;
 }
 
 .hintbutton:hover {
   background-color: #c52327 !important;
-}
-
-.selected {
-  text-decoration:underline;
 }
 
 .answer > p {
@@ -95,9 +59,14 @@ ol.answers > li:hover {
 }
 
 .score {
-  float: right;
-  padding: 15px 7% 0 0;
-  font-size: 14px;
   font-family:ff-din-web-condensed,helvetica,sans-serif;
   font-style:italic;
+}
+
+#social-media ul li a svg:hover {
+  fill: #c52327;
+}
+
+#social-media ul li a svg path:hover {
+  fill: #ffffff;
 }

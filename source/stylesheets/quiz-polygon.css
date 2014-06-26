@@ -17,29 +17,28 @@
 }
 
 .question {
-  font-family: ff-din-web-condensed,helvetica,sans-serif;
-  font-weight: 800;
+  font-family: "Gotham SSm A","Gotham SSm B",Arial,sans-serif;
+  font-weight: bold;
   color: #000000;
   font-size: 1.17em;
   margin: 0% auto;
   margin-bottom: 20px;
-  text-transform:uppercase;
-}
-
-ol.answers > li:before {
-  font-family: ff-din-web-condensed,helvetica,sans-serif;
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #fb4834;
-  width: 30px;
 }
 
 ol.answers > li {
-  font-family:helvetica,sans-serif;
+  font-family: "Gotham SSm A","Gotham SSm B",Arial,sans-serif;
+}
+
+ol.answers > li:before {
+  font-family: "Gotham SSm A","Gotham SSm B",Arial,sans-serif;
+  font-style:italic;
+  color: #ffffff;
+  background-color: #3f1e45;
+  width: 30px;
 }
 
 ol.answers > li:hover {
-  background-color: #f4f0ee;
+  background-color: #ebebec;
 }
 
 .number {
@@ -47,14 +46,15 @@ ol.answers > li:hover {
 }
 
 .hintbutton {
-  background-color: #000000;
+  background-color: #3f1e45;
   color: #ffffff;
-  font-family: ff-din-web-condensed,helvetica,sans-serif;
+  font-family: "Gotham SSm A","Gotham SSm B",Arial,sans-serif;
+  font-style:italic;
   font-weight: 800;
 }
 
 .hintbutton:hover {
-  background-color: #fb4834 !important;
+  background-color: #ed1c55 !important;
 }
 
 .selected {
@@ -71,7 +71,7 @@ ol.answers > li:hover {
 }
 
 #social-media ul li a svg:hover {
-  fill: #fb4834;
+  fill: #ed1c55;
 }
 
 #social-media ul li a svg path:hover {

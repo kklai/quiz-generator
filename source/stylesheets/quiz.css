@@ -1,57 +1,19 @@
-/* line 1, ../sass/quiz.scss */
-.title {
-  font-family: Balto, sans-serif;
-  font-weight: bold;
-  color: #4c4e4d;
-  font-size: 2.3em;
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-}
-
-/* line 11, ../sass/quiz.scss */
 .quiz-container {
-  background-color: #ffffff;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0% auto;
   margin-top: 20px;
   margin-bottom: 150px;
   text-align: center;
+  padding-bottom:40px;
 }
 
-/* line 21, ../sass/quiz.scss */
-.qhead {
-  margin-bottom: 25px;
-  text-align: left;
-}
-
-/* line 26, ../sass/quiz.scss */
-.number {
-  margin-left: 7%;
-  display: inline-block;
-  background-color: #bfd1df;
-  width: 60px;
-  text-align: center;
-  font-family: Harriet Display, serif;
-  font-size: 3em;
-  line-height: 0.9em;
-  padding-top: 1px;
-  padding-bottom: 12px;
-  display: inline-block;
-}
-
-/* line 40, ../sass/quiz.scss */
 .question {
-  font-family: Balto ,sans-serif;
-  font-weight: bold;
-  color: #4c4e4d;
   font-size: 1.17em;
   margin: 0% auto;
-  margin-bottom: 20px;
+  margin-top:20px !important;
 }
 
-/* line 49, ../sass/quiz.scss */
 ol.answers {
   position: relative;
   cursor: pointer;
@@ -59,58 +21,39 @@ ol.answers {
   list-style-type: none;
   counter-reset: li-counter;
   margin: 0px auto;
-  width: 65%;
+  width: 90%;
+  max-width:550px;
 }
 
-/* line 59, ../sass/quiz.scss */
 ol.answers > li:before {
-  font-family: Balto, sans-serif;
-  font-weight: bold;
-  color: #4c4e4d;
   font-size: 1em;
   margin-right: 10px;
   cursor: pointer;
-  background-color: #bfd1df;
   text-align: center;
   width: 30px;
   display: inline-block;
   content: counter(li-counter);
   counter-increment: li-counter;
-  padding-top:3px;
+  padding:5px 0px 5px 0px;
 }
 
-/* line 75, ../sass/quiz.scss */
 ol.answers > li {
   text-align: left;
   margin: 20px 0px;
+  padding-right:10px;
 }
 
-/* line 80, ../sass/quiz.scss */
-ol.answers > li:hover {
-  background-color: #f1f3f2;
-}
-
-/* line 84, ../sass/quiz.scss */
 .hintbutton {
-  background-color: #f1f3f2;
-  color: #4c4e4d;
   font-size: .9em;
   line-height: 1;
-  font-family: Alright Sans,sans-serif;
   padding: .7em .7em .6em;
   border: 0;
   text-transform: uppercase;
-  margin-top: 20px 20px 30px 0px;
   display: inline-block;
   cursor: pointer;
   width:160px;
-  margin:0px 5px 20px;
+  margin:2px 5px;
   display:inline-block;
-}
-
-/* line 99, ../sass/quiz.scss */
-.hintbutton:hover {
-  background-color: #bfd1df !important;
 }
 
 .selected {
@@ -123,10 +66,8 @@ ol.answers > li:hover {
 
 .score {
   float: right;
-  padding: 15px 20px 0 0;
-  font-size: 14px;
-  font-family:Harriet Display;
-  font-style:italic;
+  padding-right: 7%;
+  font-size: .8em;
 }
 
 #social-media ul {
@@ -150,10 +91,8 @@ ol.answers > li:hover {
   margin-right: 1em;
 }
 
-#social-media ul li a svg:hover {
-  fill: #fff200;
-}
-
-#social-media ul li a svg path:hover {
-  fill: #f1f3f2;
+.answer {
+  width: 90%;
+  max-width:550px;
+  margin:0% auto;
 }

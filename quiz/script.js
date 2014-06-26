@@ -32,7 +32,7 @@ function displayQuestion() {
 }
 
 function displayScore(){
-    $('.score').html("<p>Score: " + score + "/" + input.length + "</p>");
+    $('.score').html("<p>Score: " + score + "out of" + input.length + "</p>");
 }
 
 function selectAnswer() {
@@ -60,9 +60,9 @@ function checkAnswer() {
 			score++;
 			displayScore();
 
-			$(".answer").html("<p>CORRECT! " + input[currentQuestion].correct + "</p><p>Correct Answer: " + input[currentQuestion].answer + "</p>");
+			$(".answer").html("<p>Correct! " + input[currentQuestion].correct + "</p><p>Correct Answer: " + input[currentQuestion].answer + "</p>");
 		} else {
-			$(".answer").html("<p>INCORRECT! " + input[currentQuestion].incorrect + "</p><p>Correct Answer: " + input[currentQuestion].answer + "</p>");
+			$(".answer").html("<p>Incorrect! " + input[currentQuestion].incorrect + "</p><p>Correct Answer: " + input[currentQuestion].answer + "</p>");
 		}
 
 		// 'next' button
