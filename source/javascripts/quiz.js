@@ -1,4 +1,3 @@
-// read data
 var ans;
 var score = 0;
 var currentQuestion = 0;
@@ -76,6 +75,7 @@ function finalScore() {
 	$(".quiz-container").html("<div class='scorecard'><p>You correctly answered</p><p>" + score + "/" + input.length + "</p><ul class='social-media'><li>" + facebook + "</li><li>" + twitter + "</li><li>" + google + "</li></ul></div>");
 }
 
-function addcss(url) {
-	$('head').append("<link rel='stylesheet' type='text/css' href='" + url + "'");
+function addcss(css) {
+	$('head').append('<link rel="stylesheet" href="' + css + '" type="text/css" />');
+	buildQuiz();
 }
