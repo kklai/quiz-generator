@@ -30,7 +30,6 @@
   function getStylesheet() {
     pub = $('input[name="pub"]:checked').val();
     pub_stylesheet = "quiz-" + pub + ".css";
-    console.log(pub_stylesheet)
   }
 
   function embed() {
@@ -40,18 +39,19 @@
 
   function preview() {
     // generate quiz preview
+    url = "https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml";
+    init();
   }
 
   function buildquiz(){
     url = $('#url').val();
     getStylesheet();
-    embed();
     init();
+    embed();
   }
 
-  $(window).load(function(){
-    url = "https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml";
-    init();
+  $(document).ready(function(){
+    preview();
   });
 
 </script>
