@@ -17,10 +17,9 @@
 }
 
 .question {
-  font-family: ff-din-web-condensed,helvetica,sans-serif;
-  font-weight: 800;
+  font-family: "Sentinel SSm A","Sentinel SSm B",Georgia,serif;
   color: #000000;
-  font-size: 1.17em;
+  font-size: 1.5em;
   margin: 0% auto;
   margin-bottom: 20px;
 }
@@ -36,13 +35,13 @@ ol.answers {
 }
 
 ol.answers > li:before {
-  font-family: ff-din-web-condensed,helvetica,sans-serif;
+  font-family: "Sentinel SSm A","Sentinel SSm B",Georgia,serif;
   font-weight: bold;
   color: #ffffff;
   font-size: 1em;
   margin-right: 10px;
   cursor: pointer;
-  background-color: #fb4834;
+  background-color: #c52327;
   text-align: center;
   width: 30px;
   display: inline-block;
@@ -54,10 +53,11 @@ ol.answers > li:before {
 ol.answers > li {
   text-align: left;
   margin: 20px 0px;
+  font-family: "Gotham Narrow SSm A","Gotham Narrow SSm B",Arial,sans-serif;
 }
 
 ol.answers > li:hover {
-  background-color: #f4f0ee;
+  background-color: #eeeded;
 }
 
 .number {
@@ -65,8 +65,8 @@ ol.answers > li:hover {
 }
 
 .hintbutton {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #eeeded;
+  color: #000000;
   font-size: .9em;
   line-height: 1;
   font-family: ff-din-web-condensed,helvetica,sans-serif;
@@ -83,11 +83,11 @@ ol.answers > li:hover {
 }
 
 .hintbutton:hover {
-  background-color: #fb4834 !important;
+  background-color: #c52327 !important;
 }
 
 .selected {
-  background-color: #dfdfe0;
+  text-decoration:underline;
 }
 
 .answer > p {
