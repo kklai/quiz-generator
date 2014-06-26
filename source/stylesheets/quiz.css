@@ -127,3 +127,19 @@ ol.answers > li:hover {
   font-family:Harriet Display;
   font-style:italic;
 }
+
+#social-media ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+#social-media ul li {
+  display: inline;
+}
+
+#social-media ul li a {
+  text-decoration: none;
+  padding: .2em 1em;
+}
