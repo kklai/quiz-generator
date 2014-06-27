@@ -1,6 +1,7 @@
 .quiz-container {
   font-family: Alright Sans ,sans-serif;
   color: #4c4e4d;
+  padding-top: 20px;
 }
 
 .qhead {
@@ -117,4 +118,8 @@ ol.answers > li:hover {
 .answer p:first-child {
   font-family:Balto, sans-serif;
   border-top:1px solid #4c4e4d !important;
+}
+
+.progress {
+
 }
