@@ -23,7 +23,7 @@ $(window).load(function(){
 
 function buildQuiz() {
 	qnumber = currentQuestion + 1;
-	$(".quiz-container").html("<div class='qhead'><div class='number'>" + qnumber + "</div><p class='progress'>Question " + qnumber + "/" + input.length + "</p></div><div class='question'>" + input[currentQuestion].question + "</div>" +
+	$(".quiz-container").html("<div class='progress'>Question " + qnumber + "&nbsp;of&nbsp;" + input.length + "</div><div class='question'>" + input[currentQuestion].question + "</div>" +
 		"<ol class='answers'><li id='option-a'>" + input[currentQuestion].a + "</li>" +
 		"<li id='option-b'>" + input[currentQuestion].b + "</li>" +
 		"<li id='option-c'>" + input[currentQuestion].c + "</li>" +
@@ -36,7 +36,7 @@ function buildQuiz() {
 }
 
 function displayProgress(){
-	$('.progress').html("<p>Question: " + (currentQuestion+1) + "/" + input.length + "</p>");
+	$('.progress').html("<div class='progress'>Question " + qnumber + "&nbsp;of&nbsp;" + input.length + "</div>");
 }
 
 function selectAnswer() {
