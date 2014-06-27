@@ -61,6 +61,10 @@ ol.answers > li:hover {
   background-color: #f7f7f7;
 }
 
+.submityo {
+  background-color: #dfdfe0;
+}
+
 .score {
   font-family:Harriet Display;
   font-style:italic;
@@ -102,5 +106,5 @@ ol.answers > li:hover {
 
 .answer p:first-child {
   font-family:Balto, sans-serif;
-  border-top:1px solid #4c4e4d;
+  border-top:1px solid #4c4e4d !important;
 }

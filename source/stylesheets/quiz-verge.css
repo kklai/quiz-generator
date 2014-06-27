@@ -1,6 +1,7 @@
 .quiz-container {
-  border-top:1px solid #000000;
+  border-top:8px solid #fb4834;
   font-family:helvetica,sans-serif;
+  padding-top:20px;
 }
 
 .number {
@@ -35,10 +36,6 @@ ol.answers > li {
 
 ol.answers > li:hover {
   background-color: #f4f0ee;
-}
-
-.number {
-  display:none;
 }
 
 .hintbutton {
@@ -80,4 +77,8 @@ ol.answers > li:hover {
 
 .scorecard p:nth-child(2) {
   color:#fb4834;
+}
+
+.submityo {
+  background-color: #6d6e70;
 }

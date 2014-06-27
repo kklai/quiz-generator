@@ -119,6 +119,8 @@ ol.answers > li {
   display:block;
   padding-top:0px;
   padding-bottom:20x;
+  width:100%;
+  margin:0% auto;
 }
 
 .scorecard p:nth-child(1) {
@@ -134,4 +136,8 @@ ol.answers > li {
   font-weight:bold;
   margin-bottom:40px;
   margin-top:5px;
+}
+
+.answer > p {
+margin: 0px 0px 20px 0px !important;
 }
