@@ -36,11 +36,10 @@ Then you can pick a vertical, which generates a stylesheet URL e.g. quiz-vox.css
 
 
 ## How does the quiz work?
-The quiz dynamically generates an array of multiple choice questions from spreadsheet data that is stored in a JSON object. Users can Users’ answers are highlighted when selected, then the chosen string is compared to the correct answer. Scores are incremented if the user answers correctly, and the final result is displayed at the end of the quiz for the user to share on social media.
+The quiz dynamically generates an array of multiple choice questions from spreadsheet data that is stored in a JSON object. Users can click a button to see a hint for each question, which appears below the question. Users’ answers are highlighted when selected, then the chosen string is compared to the correct answer. Scores are incremented if the user answers correctly, and the final result is displayed at the end of the quiz for the user to share on social media.
 
 
 
 ## What’s next?
 The app is fully functional, but we would like to add more options for creating different kinds of quizzes (true/false, flowchart-ish). We’d also like to make options for inserting images/video/audio within questions, answers, and hints (as our project is currently completely text-based). We’d also like to polish/write better Javascript!
 =======
->>>>>>> 87ac898790e430bf6251ee9d6db7294bd6fbf16d
