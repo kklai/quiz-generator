@@ -21,7 +21,6 @@
 <div class="embed" style="margin-top: 30px; margin-bottom: 60px;">
   <h5>Generate, copy and paste this code into Chorus</h5>
   <center><p><button id="build" onclick="buildquiz()">Generate your quiz</button><p>
-  <p><i>(This embed code assumes that jquery is loaded on the page already.)</i></p>
   <p><textarea type="text" name="embedcode" id="embedcode" style="height: 150px; overflow:auto;"></textarea></center></p>
 </div>
 
@@ -43,7 +42,7 @@
   }
 
   function embed() {
-    $("#embedcode").html("&lt;div class='quiz-container'></div>&lt;script type='text/javascript'>var input = " + JSON.stringify(input) + "; var pubStylesheet = '" + pubStylesheet + "';&lt;/script>&lt;/script>&lt;script src='https://s3-us-west-2.amazonaws.com/quiz-generator/quiz.js'>&lt;/script>");
+    $("#embedcode").html("&lt;div class='quiz-container'></div>&lt;script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'>&lt;/script>&lt;script type='text/javascript'>var input = " + JSON.stringify(input) + "; var pubStylesheet = '" + pubStylesheet + "';&lt;/script>&lt;/script>&lt;script src='https://s3-us-west-2.amazonaws.com/quiz-generator/quiz.js'>&lt;/script>");
   }
 
   function buildquiz(){

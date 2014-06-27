@@ -67,7 +67,7 @@ function checkAnswer() {
 			$(".answer").html("<p>Correct!</p><p>" + input[currentQuestion].correct + "</p>");
 
 		} else {
-			$(".answer").html("<p>Sorry!</p><p> " + input[currentQuestion].incorrect + "&nbsp;The correct answer is " + input[currentQuestion].answer + "</p>");
+			$(".answer").html("<p>Sorry!</p><p> " + input[currentQuestion].incorrect + "&nbsp;The correct answer is " + input[currentQuestion].answer + ".</p>");
 		}
 		if (currentQuestion != (input.length-1)) {
 			$(".answer").append("<button id='next' class='hintbutton' onclick='nextQuestion()'>Next</button>");
