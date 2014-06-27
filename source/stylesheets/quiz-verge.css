@@ -15,7 +15,8 @@
   font-family: ff-din-web-condensed,helvetica,sans-serif;
   font-weight: 800;
   color: #000000;
-  font-size: 1.17em;
+  font-size: 1.5em;
+  font-style:italic;
   margin: 0% auto;
   margin-bottom: 20px;
   text-transform:uppercase;
@@ -23,10 +24,13 @@
 
 ol.answers > li:before {
   font-family: ff-din-web-condensed,helvetica,sans-serif;
-  font-weight: bold;
+  font-style: italic;
   color: #ffffff;
   background-color: #fb4834;
   width: 30px;
+  font-size: 1em;
+  line-height: 0.8em;
+  padding: 8px 0px 5px 0px;
 }
 
 ol.answers > li {
@@ -41,7 +45,8 @@ ol.answers > li:hover {
   background-color: #000000;
   color: #ffffff;
   font-family: ff-din-web-condensed,helvetica,sans-serif;
-  font-weight: 800;
+  font-weight: 400;
+  font-size: 1.04em;
 }
 
 .hintbutton:hover {
