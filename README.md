@@ -42,4 +42,3 @@ The quiz dynamically generates an array of multiple choice questions from spread
 
 ## What’s next?
 The app is fully functional, but we would like to add more options for creating different kinds of quizzes (true/false, flowchart-ish). We’d also like to make options for inserting images/video/audio within questions, answers, and hints (as our project is currently completely text-based). We’d also like to polish/write better Javascript!
-=======
