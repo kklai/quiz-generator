@@ -9,7 +9,6 @@
 }
 
 .qhead {
-  display:none;
 }
 
 .question {
@@ -30,6 +29,7 @@ ol.answers > li:before {
 
 ol.answers > li {
   font-family: "Gotham SSm A","Gotham SSm B",Arial,sans-serif;
+  font-size:0.9em;
 }
 
 ol.answers > li:hover {
@@ -62,6 +62,11 @@ ol.answers > li:hover {
 
 .answer p:first-child {
   font-family: "Sentinel SSm A","Sentinel SSm B",Georgia,serif;
+}
+
+.answer p {
+  font-family: "Gotham SSm A","Gotham SSm B",Arial,sans-serif;
+  font-size:0.9em;
 }
 
 .submityo {

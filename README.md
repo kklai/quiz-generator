@@ -1,7 +1,8 @@
 Quiz Quartet
 ==========
 
-Quiz Quartet was built to automate the process for generating a quiz so no developer has to be involved and write repetitive code! Check out the project at http://quiz-generator.herokuapp.com
+Quiz Quartet was built to automate the process for generating a quiz so no developer has to be involved and write repetitive code! Check out the project at [http://quiz-generator.herokuapp.com](http://quiz-generator.herokuapp.com)
+
 
 ## Running it locally
 
@@ -24,7 +25,6 @@ This app uses Middleman, so cd to your project directory and just run:
 `bundle exec middleman build`
 
 
-
 ## How does the tool work?
 
 Editors will use a Google Spreadsheet Template to create the information in the quiz. For each question, you can enter questions, four choices, the correct answer, incorrect message, correct message and a hint. Once the editor is done, they will publish the spreadsheet to the web, and grab the public URL for the spreadsheet.
@@ -42,3 +42,5 @@ The quiz dynamically generates an array of multiple choice questions from spread
 
 ## What’s next?
 The app is fully functional, but we would like to add more options for creating different kinds of quizzes (true/false, flowchart-ish). We’d also like to make options for inserting images/video/audio within questions, answers, and hints (as our project is currently completely text-based). We’d also like to polish/write better Javascript!
+=======
+>>>>>>> 87ac898790e430bf6251ee9d6db7294bd6fbf16d
