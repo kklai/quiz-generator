@@ -8,23 +8,29 @@ body {
 	top:0;
 	left:0;
 	color:#323132;
-	/*background-image:url(https://farm6.staticflickr.com/5495/14537058643_1ed7fb2ed3_o.jpg);*/
+	background-image:url(https://farm6.staticflickr.com/5495/14537058643_1ed7fb2ed3_o.jpg);
 	background-repeat:repeat;
 	background-attachment:fixed;
-	background-position:center top;
+	background-position:center bottom;
+	background-size:100%;
 	margin-right:0px;
+}
+
+.voxh {
+	position:absolute;
+	top:10px;
+	right:10px;
+	z-index:6;
 }
 
 .headline {
 	z-index:3 !important;
-	/*padding:230px 10px 270px 10%;*/
+	padding:50px 0px 50px 0px;
 	text-align: center;
-	/*width:90%;*/
 	font-family:'open sans', helvetica, sans-serif;
 	font-weight:800;
-	/*text-align:left;*/
 	font-size:4em;
-	color:#414141;
+	color:#ffffff;
 }
 
 .containing {
@@ -165,11 +171,7 @@ button:hover {
 
 .pv {
 	padding:75px 0px 30px 0px;
-	background-image:url(https://farm6.staticflickr.com/5495/14537058643_1ed7fb2ed3_o.jpg);
-	background-size:100%;
-	background-position:center;
-	background-repeat:repeat;
-	background-attachment:fixed;
+	background-color:transparent;
 	z-index:6!important;
 }
 
