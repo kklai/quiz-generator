@@ -1,6 +1,9 @@
 Quiz Generator
 ==============
 
+## Running Locally
+This app uses Middleman, so cd to your project directory and just run:
+
 ##### Install Middleman
 
 `gem install middleman`
