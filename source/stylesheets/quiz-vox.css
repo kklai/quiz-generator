@@ -13,12 +13,16 @@
   background-color: #bfd1df;
   width: 60px;
   text-align: center;
-  font-family: Harriet Display, serif;
-  font-size: 3em;
-  line-height: 0.9em;
   padding-top: 1px;
   padding-bottom: 12px;
   display: inline-block;
+  font-family: Harriet Display, serif;
+
+}
+
+.number:first-child {
+  font-size: 3em;
+  line-height: 0.9em;
 }
 
 .question {
@@ -36,11 +40,13 @@ ol.answers > li:before {
   font-weight: bold;
   color: #4c4e4d;
   background-color: #bfd1df;
-  width: 30px;
+  width: 25px;
+  padding: 2px 0px;
 }
 
 ol.answers > li {
-  font-family:Alright Sans, sans-serif;
+  font-family: Alright Sans, sans-serif;
+  padding: 0px 0px 0px 10px;
 }
 
 ol.answers > li:hover {
@@ -77,6 +83,10 @@ ol.answers > li:hover {
   padding: 0;
   list-style-type: none;
   text-align: center;
+}
+
+#social-media > li:before {
+  display:none;
 }
 
 #social-media ul li {

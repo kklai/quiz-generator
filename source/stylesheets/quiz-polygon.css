@@ -42,6 +42,7 @@ ol.answers > li:hover {
   font-family: "Gotham SSm A","Gotham SSm B",Arial,sans-serif;
   font-style:italic;
   font-weight: 800;
+  width:180px;
 }
 
 .hintbutton:hover {
