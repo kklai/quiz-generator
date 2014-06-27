@@ -1,5 +1,6 @@
 Quiz Generator
 ==============
+**Check out the project:** http://quiz-generator.herokuapp.com
 
 ## Running Locally
 This app uses Middleman, so cd to your project directory and just run:
