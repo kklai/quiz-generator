@@ -39,6 +39,11 @@ body {
 	margin: 0;
 }
 
+.headline h1 > img {
+width: 56px;
+margin-bottom: -9px;
+}
+
 .containing {
 	z-index:10!important;
 	position:relative;
