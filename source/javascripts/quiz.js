@@ -23,7 +23,7 @@ $(window).load(function(){
 
 function buildQuiz() {
 	qnumber = currentQuestion + 1;
-	$(".quiz-container").html("<div class='qhead'><div class='number'>" + qnumber + "</div><p class='score'>Score: " + score + "/" + input.length + "</p></div><div class='question'>" + input[currentQuestion].question + "</div>" +
+	$(".quiz-container").html("<div class='qhead'><div class='number'>" + qnumber + "</div><p class='progress'>Question " + qnumber + "/" + input.length + "</p></div><div class='question'>" + input[currentQuestion].question + "</div>" +
 		"<ol class='answers'><li id='option-a'>" + input[currentQuestion].a + "</li>" +
 		"<li id='option-b'>" + input[currentQuestion].b + "</li>" +
 		"<li id='option-c'>" + input[currentQuestion].c + "</li>" +
@@ -35,8 +35,8 @@ function buildQuiz() {
 	submitAnswer();
 }
 
-function displayScore(){
-	$('.score').html("<p>Score: " + score + "/" + input.length + "</p>");
+function displayProgress(){
+	$('.progress').html("<p>Question: " + (currentQuestion+1) + "/" + input.length + "</p>");
 }
 
 function selectAnswer() {
@@ -62,7 +62,7 @@ function checkAnswer() {
 		ans = $(".selected").html();
 		if (ans == input[currentQuestion].answer) {
 			score++;
-			displayScore();
+			displayProgress();
 
 			$(".answer").html("<p>Correct!</p><p>" + input[currentQuestion].correct + "</p>");
 
