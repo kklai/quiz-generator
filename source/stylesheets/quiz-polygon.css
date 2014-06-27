@@ -56,10 +56,6 @@ ol.answers > li:hover {
   background-color: #dfdfe0;
 }
 
-.answer > p {
-  margin: 20px 0 20px 0px;
-}
-
 .score {
   font-family:ff-din-web-condensed,helvetica,sans-serif;
   font-style:italic;
