@@ -14,7 +14,7 @@ var google = "<a href='https://plus.google.com/110525221945179942553' rel='publi
 
 function quiz() {
 	$('head').append('<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/quiz-generator/quiz.css" type="text/css" />');
-	$('head').append('<link rel="stylesheet" href="stylesheets/' + pubStylesheet + '" type="text/css" />');
+	$('head').append('<link rel="stylesheet" href="' + pubStylesheet + '" type="text/css" />');
 }
 
 $(window).load(function(){

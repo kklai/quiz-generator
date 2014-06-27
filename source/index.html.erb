@@ -32,12 +32,12 @@
 
 <script type="text/javascript">
   var key;
-  var pubStylesheet = 'stylesheets/quiz-vox.css';
+  var pubStylesheet = 'https://s3-us-west-2.amazonaws.com/quiz-generator/quiz-vox.css';
   var pub;
 
   function getStylesheet() {
     pub = $('input[name="pub"]:checked').val();
-    pubStylesheet = "quiz-" + pub + ".css";
+    pubStylesheet = "https://s3-us-west-2.amazonaws.com/quiz-generator/quiz-" + pub + ".css";
   }
 
   function embed() {
