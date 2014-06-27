@@ -1,12 +1,7 @@
 .quiz-container {
-  border-top:1px solid #000000;
-  width: 100%;
-  max-width:900px;
-  margin: 0% auto;
-  margin-top: 20px;
-  margin-bottom: 150px;
-  text-align: center;
+  border-top:8px solid #fb4834;
   font-family:helvetica,sans-serif;
+  padding-top:20px;
 }
 
 .number {
@@ -43,10 +38,6 @@ ol.answers > li:hover {
   background-color: #f4f0ee;
 }
 
-.number {
-  display:none;
-}
-
 .hintbutton {
   background-color: #000000;
   color: #ffffff;
@@ -62,13 +53,13 @@ ol.answers > li:hover {
   background-color: #dfdfe0;
 }
 
-.answer > p {
-  margin: 20px 0 20px 0px;
-}
-
 .score {
   font-family:ff-din-web-condensed,helvetica,sans-serif;
   font-style:italic;
+}
+
+#social-media ul li a svg {
+  fill:#000000;
 }
 
 #social-media ul li a svg:hover {
@@ -77,4 +68,17 @@ ol.answers > li:hover {
 
 #social-media ul li a svg path:hover {
   fill: #ffffff;
+}
+
+.answer p:first-child {
+  font-family: ff-din-web-condensed,helvetica,sans-serif;
+  text-transform:uppercase;
+}
+
+.scorecard p:nth-child(2) {
+  color:#fb4834;
+}
+
+.submityo {
+  background-color: #6d6e70;
 }

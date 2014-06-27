@@ -1,34 +1,35 @@
-<div class="container">
-<h1><img src="images/qq.png" width="20" style="margin-right: 10px;">Quiz Quartet</h1>
-
-<h5>Google Spreadsheet Template: <button><a href="https://drive.google.com/previewtemplate?id=0AlMgrVuuAI0MdGl6NngwMGYtX3RHQjlic0xzNnBjUGc&mode=public" target="_new">Create Quiz Spreadsheet</a></button></h5>
-
-
-<p>Once you're done editing, make sure to publish the spreadsheet to the web. Under the "File" menu, select "Publish top the Web." Click "Start Publishing" and copy the URL to build the quiz.</p>
-
-<p class="try">Or try this spreadsheet: <i>https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml</i></p>
-
-<h5>Google Spreadsheet URL:&nbsp;&nbsp;&nbsp;<input type="text" id="url">&nbsp;&nbsp;&nbsp;</h5>
-
-<h5>Choose Vertical: </h5>
-<form>
-  <input type="radio" name="pub" value="vox">&nbsp;vox.com
-  <input type="radio" name="pub" value="sbnation">&nbsp;sbnation.com
-  <input type="radio" name="pub" value="verge">&nbsp;verge.com
-  <input type="radio" name="pub" value="polygon">&nbsp;polygon.com
-</form>
-<br>
-<button id="build" onclick="buildquiz()">Build quiz!</button>
-<div class="embed" style="margin-top: 30px; margin-bottom: 60px;">
-  <h5>Embed code: <span class="try">(This embed code assumes that jquery is loaded on the page already.)</span></h5>
-  <p><textarea type="text" name="embedcode" id="embedcode" style="width: 100%; height: 200px;"></textarea></p>
+<div class="headline">
+  Quiz Quartet <img src="https://farm3.staticflickr.com/2909/14515576894_50d801202c_o.png" style="width:70px;">
 </div>
-<hr>
+<div class="containing">
+  <h5> Write your quiz</h5>
+  <p>Use <a href="https://drive.google.com/previewtemplate?id=0AlMgrVuuAI0MdGl6NngwMGYtX3RHQjlic0xzNnBjUGc&mode=public" target="_new">this Google Spreadsheet template</a> to write your quiz.</p>
+  <p>Once you're done editing, publish the spreadsheet to the web. Under the <b>"File"</b> menu, select <b>"Publish to the Web."</b> Click <b>"Start Publishing"</b> and copy the URL to build the quiz.</p>
+  <center><p style="font-size:0.8em">Want to test it out? Try this spreadsheet:<br><textarea style="overflow:auto:" rows="2">https://docs.google.com/spreadsheets/d/1RWfz6fPQYVH3PsadeEnw8LUKF95B8NgyG3ndRxW94Uw/pubhtml</textarea></p></center>
+
+<h5> Enter your spreadsheet</h5>
+<p>Copy and paste your spreadsheet's URL here: <input type="text" id="url"></p>
+
+<h5> Select your vertical</h5>
+<form>
+  <input type="radio" name="pub" value="vox">&nbsp;Vox&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="radio" name="pub" value="sbnation">&nbsp;SB Nation&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="radio" name="pub" value="verge">&nbsp;The Verge&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="radio" name="pub" value="polygon">&nbsp;Polygon
+</form>
+<div class="embed" style="margin-top: 30px; margin-bottom: 60px;">
+  <h5>Generate, copy and paste this code into Chorus</h5>
+  <center><p><button id="build" onclick="buildquiz()">Generate your quiz</button><p>
+  <p><i>(This embed code assumes that jquery is loaded on the page already.)</i></p>
+  <p><textarea type="text" name="embedcode" id="embedcode" style="height: 150px; overflow:auto;"></textarea></center></p>
+</div>
+
 <h5>Preview</h5>
 </div>
 
-
+<div class="pv">
 <div class="quiz-container"></div>
+</div>
 
 <script type="text/javascript">
   var key;
@@ -49,5 +50,4 @@
     init();
     getStylesheet();
   }
-
 </script>

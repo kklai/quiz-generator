@@ -1,11 +1,12 @@
 .quiz-container {
   width: 100%;
-  max-width: 900px;
+  max-width: 770px;
   margin: 0% auto;
   margin-top: 20px;
   margin-bottom: 150px;
   text-align: center;
   padding-bottom:40px;
+  background-color: #ffffff;
 }
 
 .question {
@@ -17,12 +18,13 @@
 ol.answers {
   position: relative;
   cursor: pointer;
-  text-align: center;
   list-style-type: none;
   counter-reset: li-counter;
   margin: 0px auto;
-  width: 90%;
-  max-width:550px;
+  width: 80%;
+  max-width:500px;
+  padding: 0px;
+  margin-bottom: 50px;
 }
 
 ol.answers > li:before {
@@ -40,7 +42,11 @@ ol.answers > li:before {
 ol.answers > li {
   text-align: left;
   margin: 20px 0px;
-  padding-right:10px;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  transition:.2s;
 }
 
 .hintbutton {
@@ -54,14 +60,15 @@ ol.answers > li {
   width:160px;
   margin:2px 5px;
   display:inline-block;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  transition:.2s;
 }
 
 .selected {
   background-color: #dfdfe0;
-}
-
-.answer > p {
-  margin: 20px 0 20px 0px;
 }
 
 .score {
@@ -95,12 +102,33 @@ ol.answers > li {
   width: 90%;
   max-width:550px;
   margin:0% auto;
+  margin-top:20px !important;
+}
+
+.answer p:first-child {
+  font-weight:bold;
+  font-size:1.2em;
+  display:inline-block;
+  padding-top:30px;
+  padding-bottom:0px;
+  border-top:1px solid #000000;
+  width:100%;
+}
+
+.answer p:nth-child(2) {
+  display:block;
+  padding-top:0px;
+  padding-bottom:20x;
+  width:100%;
+  margin:0% auto;
 }
 
 .scorecard p:nth-child(1) {
   font-weight:bold;
   margin-top:45px;
   display:inline-block;
+  font-size:1.2em;
+  line-height:1em !important;
 }
 
 .scorecard p:nth-child(2) {
@@ -108,4 +136,8 @@ ol.answers > li {
   font-weight:bold;
   margin-bottom:40px;
   margin-top:5px;
+}
+
+.answer > p {
+margin: 0px 0px 20px 0px !important;
 }

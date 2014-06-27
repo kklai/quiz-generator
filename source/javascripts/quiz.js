@@ -43,7 +43,7 @@ function selectAnswer() {
 	$("li").click(function() {
 		$(".selected").removeClass("selected");
 		$(this).addClass("selected");
-		$("#submit").css("background-color", "#dfdfe0").fadeIn();
+		$("#submit").addClass("submityo").fadeIn();
 	});
 }
 
@@ -63,9 +63,11 @@ function checkAnswer() {
 		if (ans == input[currentQuestion].answer) {
 			score++;
 			displayScore();
-			$(".answer").html("<p>Correct! " + input[currentQuestion].correct + "</p><p>" + input[currentQuestion].answer + "</p>");
+
+			$(".answer").html("<p>Correct!</p><p>" + input[currentQuestion].correct + "</p>");
+
 		} else {
-			$(".answer").html("<p>Incorrect! " + input[currentQuestion].incorrect + "</p><p>Correct answer: " + input[currentQuestion].answer + "</p>");
+			$(".answer").html("<p>Sorry!</p><p> " + input[currentQuestion].incorrect + "&nbsp;The correct answer is " + input[currentQuestion].answer + "</p>");
 		}
 		if (currentQuestion != (input.length-1)) {
 			$(".answer").append("<button id='next' class='hintbutton' onclick='nextQuestion()'>Next</button>");
